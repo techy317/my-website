@@ -10,12 +10,19 @@
 
     <div class="container">
         <details>
-            <summary>Click Me</summary>
+            <summary onclick="showImage()">Click Me</summary>
             <div class="image-wrapper">
-                <img src="fun.jpg" alt="Funny Image">
+                <img id="secret-image" src="" alt="Funny Image" style="display: none;">
             </div>
         </details>
     </div>
+
+    <script>
+        function showImage() {
+            document.getElementById('secret-image').src = 'fun.jpg';
+            document.getElementById('secret-image').style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
