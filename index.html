@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Popup Image</title>
+    <link rel="stylesheet" href="fun.css">
 </head>
 <body>
 
     <div class="container">
-        <details>
-            <summary onclick="showImage()">Click Me</summary>
+        <details id="secret-details">
+            <summary>Click Me</summary>
             <div class="image-wrapper">
-                <img id="secret-image" src="fun.jpg" alt="Funny Image" style="display: none;">
+                <img id="secret-image" alt="Funny Image">
             </div>
         </details>
     </div>
 
     <script>
-        function showImage() {
-            document.getElementById('secret-image').src = 'fun.jpg';
-            document.getElementById('secret-image').style.display = 'block';
-        }
-        </script>
+        document.getElementById('secret-details').addEventListener('toggle', function() {
+            if (this.open) {
+                document.getElementById('secret-image').src = 'fun.jpg';
+            }
+        });
+    </script>
 
+</body>
+</html>
 </body>
 </html>
